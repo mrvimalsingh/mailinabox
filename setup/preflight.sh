@@ -20,7 +20,7 @@ fi
 # Check that we have enough memory. Skip the check if we appear to be
 # running inside of Vagrant, because that's really just for testing.
 TOTAL_PHYSICAL_MEM=$(head -n 1 /proc/meminfo | awk '{print $2}')
-if [ $TOTAL_PHYSICAL_MEM -lt 786432 ]; then
+if [ $TOTAL_PHYSICAL_MEM -lt 511000 ]; then
 if [ ! -d /vagrant ]; then
 	echo "Your Mail-in-a-Box needs more than $TOTAL_PHYSICAL_MEM MB RAM."
 	echo "Please provision a machine with at least 768 MB, 1 GB recommended."
